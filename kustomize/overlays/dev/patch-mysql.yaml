@@ -1,0 +1,22 @@
+# my-kustomize/overlays/dev/patch-mysql-env.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: cicd-ice-coding
+spec:
+  template:
+    spec:
+      containers:
+        - name: mysql
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: DevRootPassword
+            - name: MYSQL_USER
+              value: devUser
+            - name: MYSQL_PASSWORD
+              value: DevDBPass
+            - name: MYSQL_DATABASE
+              value: DEVDB
+            - name: MYSQL_ROOT_HOST
+              value: "%"

@@ -1,0 +1,11 @@
+# my-kustomize/overlays/dev/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# base를 참조 (../.. 은 상위 디렉터리 2단계)
+resources:
+  - ../../base
+
+# MySQL env 패치 (replica, password 등등 오버라이드)
+patchesStrategicMerge:
+  - patch-mysql-env.yaml
