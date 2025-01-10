@@ -8,4 +8,6 @@ resources:
 
 # MySQL env 패치 (replica, password 등등 오버라이드)
 patchesStrategicMerge:
-  - patch-mysql-env.yaml
+  - patch-mysql.yaml
+  - patch-back.yaml
+
