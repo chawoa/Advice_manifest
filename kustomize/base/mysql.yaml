@@ -21,13 +21,13 @@ spec:
           name: mysql
           env:
             - name: MYSQL_ROOT_PASSWORD
-              value: P!ssw0rd
+              value: sample
             - name: MYSQL_USER
-              value: been1
+              value: sample
             - name: MYSQL_PASSWORD
-              value: P!ssw0rd
+              value: sample
             - name: MYSQL_DATABASE
-              value: ICEBREAKER
+              value: sample
             - name: MYSQL_ROOT_HOST
               value: "%"
           ports:

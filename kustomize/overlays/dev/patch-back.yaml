@@ -1,0 +1,15 @@
+# my-kustomize/overlays/dev/patch-mysql-env.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cicd-ice-back-deploy
+  namespace: cicd-ice-coding
+spec:
+  template:
+    spec:
+      containers:
+        - name: cicd-ice-back
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: Devurl
+
